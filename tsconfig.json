@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"module": "commonjs" /* Specify what module code is generated. */,
+		"rootDir": "src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+		"outDir": "dist" /* Specify an output folder for all emitted files. */,
+		"strict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"types": ["node"]
+	},
+	"include": ["src", "env.d.ts"],
+	"exclude": ["node_modules", "dist"]
+}
