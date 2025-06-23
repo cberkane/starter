@@ -12,9 +12,7 @@ app.use(
 		methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 		allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
 	}),
-	helmet({
-		xPoweredBy: true,
-	}),
+	helmet({}),
 );
 
 export default app;
