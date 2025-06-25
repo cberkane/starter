@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: node-starter-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app            
+      - /app/node_modules
+    env_file:
+      - .env.dev
+    command: npm run dev
+    restart: unless-stopped
