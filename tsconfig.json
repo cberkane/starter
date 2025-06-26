@@ -10,7 +10,7 @@
 		"skipLibCheck": true /* Skip type checking all .d.ts files. */,
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
-		"types": ["node"]
+		"types": ["node", "jest"]
 	},
 	"include": ["src", "env.d.ts"],
 	"exclude": ["node_modules", "dist"]
