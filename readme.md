@@ -1,7 +1,8 @@
 # Node Starter Project
 
-This project serves as an example for an Express REST API.
+This project serves as an example for an Express server as REST API.
 It contains all the packages for a production-grade project.
+It also provides a basic structure to start your project.
 
 ## Project Structure
 
@@ -15,6 +16,21 @@ src/
 ├── types/          # TypeScript types
 └── tests/          # Unit tests
 ```
+
+## Main packages
+
+- `nodemon`: to serve the project locally
+- `dotenv` and `cross-env`: to handle environment variables
+- `cors`: to configure cors policy
+- `helmet`: to secure the server by setting HTTP headers
+- `jest`: to perform unit tests
+- `express-rate-limit`: to add a rate limiter to request, if needed
+- `cookie-parser`: to parse cookie headers and set cookies
+- `winston`: to create logs
+- `eslint`: to lint the codebase
+- `husky`: to perform commit hooks
+- `swagger`: to document routes
+- `zod`: to perform data validation
 
 ## 1. TypeScript Setup
 

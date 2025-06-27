@@ -1,0 +1,24 @@
+{
+	"$schema": "https://spec.openapis.org/oas/3.0/schema/2021-09-28",
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Node Starter API",
+		"description": "This is a starter API for Node.js projects using Express.",
+		"version": "1.0.0"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:8000",
+			"description": "Local development server"
+		}
+	],
+	"paths": {
+		"/foo": {
+			"get": {
+				"description": "Retrieve all the foos",
+                "tags": ["Foo", "Example"],
+				"responses": {}
+			}
+		}
+	}
+}
