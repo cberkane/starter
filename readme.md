@@ -1,44 +1,86 @@
 # Node Starter Project
-This project serves as an example for an Express REST API. 
 
-## Setup TypeScript
+This project serves as an example for an Express REST API.
+It contains all the packages for a production-grade project.
+
+## Project Structure
+
+```
+src/
+├── config/         # App configuration
+├── controllers/    # Route handlers
+├── middlewares/    # Custom middlewares
+├── routes/         # API routes
+├── services/       # Business logic
+├── types/          # TypeScript types
+└── tests/          # Unit tests
+```
+
+## 1. TypeScript Setup
 
 1. Install TypeScript: `npm install -D typescript @types/node ts-node`
-2. Create a configuration file for typescript: `tsconfig.json` 
+2. Create a configuration file for typescript: `tsconfig.json`
 3. Add build script: `"build": "tsc"`
 
-## HTTP Server (Express)
+## 2. HTTP Server (Express)
 
 1. Install Express: `npm install express`
 2. Install Express types: `npm install -D @types/express`
 
-## Local server with hot reload (Nodemon)
+## 3. Local server with hot reload (Nodemon)
 
 1. Install nodemon: `npm install -D nodemon`
 2. Create a config file: `nodemon.json`
 3. Add the script to serve the project: `"dev": "nodemon"`
 4. Make sure nodemon is in watch mode
 
-## Environment Variables (Dotenv)
+## 4. Environment Variables (Dotenv)
 
 1. Install dotenv: `npm install dotenv`
 2. Install cross-env to handle environment variable injection `npm install -D cross-env`
-2. Create an `.env` file for local developpement, also for production ...
+3. Create an `.env` file for local developpement, also for production ...
 4. Add typing to the env variables in `env.d.ts`
 5. Optionnal: export all variables in a separate file `config/env.ts`
 
-## Dockerize the application
+## 5. Dockerization
+
 1. Create a `Dockerfile` to build an image of the project
 2. Create a `docker-compose.yml` to build the application as a service
 
-## Cors configuration
+## 6. Security
+
+### 6.1 CORS
 
 1. Install cors middleware `npm install cors`
-2. Add the cors middleware to the main
-3. Optionnal: you can add a list of authorized origins to consume the API
+2. Add the cors middleware to the main app
+3. Optionnal: you can add a list of authorized origins to connect with the API
 
-## Logger
+### 6.2 Helmet
+
+1. Install helmet middleware `npm install helmet`
+2. Add the helmet middleware to the main app
+
+### 6.3 Rate limiting
+
+1. Install the rate limiter package `npm install express-rate-limit`
+2. Add middlewares to handle rate limiting, under `middlewares/rate-limiter.ts`
+
+## 8. Logging
 
 1. Install winston logger `npm install winston`
 2. Create a logger configuration file under `config/`
 3. Add a path for the logging directory en `.env` files
+
+## 9. Unit testing
+
+1. Install jest and jest types `npm install -D jest @types/jest`
+2. Add jest types to the compiler
+3. Add configuration so jest can scan the right folders
+4. Add the script to launch unit testing: `"test": "jest"`
+
+## 10. Linting & pre-commit hooks
+
+1. Install eslint: `npm install --save-dev eslint`
+2. Execute `npx eslint init` to add a config file: `eslint.config.mjs`
+3. Install husky to trigger commit hooks
+4. Add a commit hook to trigger linting and testing before each commit
