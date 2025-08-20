@@ -17,7 +17,7 @@ src/
 └── tests/          # Unit tests
 ```
 
-## Main Packages
+## Installed Packages
 
 The project includes the following core packages:
 
@@ -33,3 +33,10 @@ The project includes the following core packages:
 - **`husky`** – Manages Git hooks (e.g., pre-commit checks).
 - **`swagger`** – Generates and serves interactive API documentation.
 - **`zod`** – Schema-based validation for request data.
+
+## How to use the project
+
+1 - Create the .env.dev, .env.prod, and .env.test files.
+2 - Add the environment variables from the example file to each of them.
+3 - Install the dependencies by running: `npm install`.
+4 - Start the project using: `docker-compose up --build`.
